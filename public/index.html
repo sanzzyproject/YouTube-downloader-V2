@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fab fa-youtube" style="color: #ff0000;"></i> YouTubeDL
+            </a>
+            <div class="nav-icons">
+                <i class="fas fa-language"></i>
+                <i class="far fa-smile"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="card">
+            <div class="icon-header">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <h1>YouTube <span class="highlight">Downloader</span></h1>
+            <p class="subtitle">High-quality Video & Audio streaming & download</p>
+
+            <div class="input-group">
+                <i class="fas fa-link"></i>
+                <input type="text" id="urlInput" placeholder="Paste YouTube link here...">
+            </div>
+
+            <div class="options">
+                <select id="formatSelect">
+                    <option value="mp3">MP3 (Audio)</option>
+                    <option value="mp4">MP4 (Video)</option>
+                </select>
+            </div>
+
+            <button id="downloadBtn" onclick="startDownload()">
+                <i class="fas fa-bolt"></i> Download Music/Video
+            </button>
+
+            <div id="resultArea" class="result-area" style="display: none;">
+                <div class="loader" id="loader"></div>
+                <div id="resultContent" style="display: none;">
+                    <h3 id="videoTitle">Title Here</h3>
+                    <a id="downloadLink" href="#" target="_blank" class="download-final">Save File</a>
+                </div>
+                <div id="errorMsg" style="color: #ff4444; display: none; margin-top: 10px;"></div>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="f-icon"><i class="fas fa-bolt"></i></div>
+                <span>SUPER FAST</span>
+            </div>
+            <div class="feature-item">
+                <div class="f-icon"><i class="fas fa-shield-alt"></i></div>
+                <span>SECURE</span>
+            </div>
+            <div class="feature-item">
+                <div class="f-icon"><i class="fas fa-star"></i></div>
+                <span>HIGH QUALITY</span>
+            </div>
+            <div class="feature-item">
+                <div class="f-icon"><i class="fas fa-mobile-alt"></i></div>
+                <span>RESPONSIVE</span>
+            </div>
+        </div>
+
+        <div class="how-to-card">
+            <h2><i class="fas fa-book-open"></i> How to Use</h2>
+            <div class="step">
+                <span class="step-num">1</span>
+                <span>Open YouTube App & Copy Link</span>
+            </div>
+            <div class="step">
+                <span class="step-num">2</span>
+                <span>Paste Link in the box above</span>
+            </div>
+            <div class="step">
+                <span class="step-num">3</span>
+                <span>Click Download & Save MP3/MP4</span>
+            </div>
+        </div>
+        
+        <div class="footer-text">SANN404 FORUM</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
